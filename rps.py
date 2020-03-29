@@ -15,7 +15,8 @@ while userInput == "yes":
         userInput == input("Do you want to play again?: ").lower()
         if userInput != "yes":
             print("Thanks for playing!")
-            
+            userInput != "yes"
+            return userInput 
 
     if compChoice == userChoice:
         print("It's a tie!")
