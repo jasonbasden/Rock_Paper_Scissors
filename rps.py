@@ -1,6 +1,6 @@
 import random
 
-userInput = input("Play again?: ")
+userInput = input("Do you want to play Rock, Paper, Scissors?: ").lower()
 
 
 while userInput == "yes":
