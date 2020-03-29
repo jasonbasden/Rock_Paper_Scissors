@@ -9,33 +9,38 @@ while userInput == "yes":
 
     userChoice = input("Rock! Paper! Scissors!: ")
 
+    
+    def play_again():
+
+        userInput == input("Do you want to play again?: ").lower()
+        if userInput != "yes":
+            print("Thanks for playing!")
+            
+
     if compChoice == userChoice:
         print("It's a tie!")
-        break
+        play_again()
+        
     
     if compChoice == "Rock" and userChoice == "Scissors" and compChoice != userChoice:
         print("The computer wins!")
     else:
         print("You win!")
-        break
+        play_again()
 
     if compChoice == "Paper" and userChoice == "Rock" and compChoice != userChoice:
         print("The computer wins!")
     else:
         print("You win!")
-        break
+        play_again()
+        
 
     if compChoice == "Scissors" and userChoice == "Paper" and compChoice != userChoice:
         print("The computer wins!")
     else:
         print("You win!")
-        break
+        play_again()
+        
 
 
-
-    userInput2 = input("Play again? ").lower()
-    
-    if userInput2 == "yes":
-        userInput = "yes"
-    else:
-        userInput = "no"
+ 
