@@ -1,47 +1,31 @@
 import random
 
-userInput = input("Do you want to play Rock, Paper, Scissors?: ").lower()
+def play_again():
 
+    userInput = input("Do you want to play again?: ").lower()
+    if userInput != "yes":
+        print("Thanks for playing!")
+        return "no" # to cancel the while loop
+    else:
+        return "yes"
+
+userInput = input("Do you want to play Rock, Paper, Scissors?: ").lower()
 
 while userInput == "yes":
 
-    compChoice = random.choice = ["Rock", "Paper", "Scissors"]
+    weapons = ["Rock", "Paper", "Scissors"]
+    compChoice = weapons[random.randint(0,2)].lower() # Grabs random weapon 
 
     userChoice = input("Rock! Paper! Scissors!: ")
 
-    
-    def play_again():
-
-        userInput == input("Do you want to play again?: ").lower()
-        if userInput != "yes":
-            print("Thanks for playing!")
-            userInput != "yes"
-            return userInput 
-
     if compChoice == userChoice:
         print("It's a tie!")
-        play_again()
-        
+        userInput = play_again()
     
-    if compChoice == "Rock" and userChoice == "Scissors" and compChoice != userChoice:
+    # These have to be lower case to be able to check it more accurately
+    elif (compChoice == "rock" and userChoice == "scissors") or (compChoice == "paper" and userChoice == "rock") or (compChoice == "scissors" and userChoice == "paper"):
         print("The computer wins!")
+        userInput = play_again()
     else:
         print("You win!")
-        play_again()
-
-    if compChoice == "Paper" and userChoice == "Rock" and compChoice != userChoice:
-        print("The computer wins!")
-    else:
-        print("You win!")
-        play_again()
-        
-
-    if compChoice == "Scissors" and userChoice == "Paper" and compChoice != userChoice:
-        print("The computer wins!")
-    else:
-        print("You win!")
-        play_again()
-        
-
-
- 
+        userInput = play_again()
