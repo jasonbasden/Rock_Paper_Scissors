@@ -24,8 +24,8 @@ while userInput == "yes":
     
     # These have to be lower case to be able to check it more accurately
     elif (compChoice == "rock" and userChoice == "scissors") or (compChoice == "paper" and userChoice == "rock") or (compChoice == "scissors" and userChoice == "paper"):
-        print("The computer wins!")
+        print("The computer chose " + compChoice + ". The computer wins!")
         userInput = play_again()
     else:
-        print("You win!")
+        print("You win! The computer chose " + compChoice + ".")
         userInput = play_again()
